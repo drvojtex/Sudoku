@@ -3,9 +3,11 @@
 
 This repository contains a heuristic solver based on simulated annealing for a sudoku puzzle.
 
-> [sudoku.py](https://github.com/drvojtex/Sudoku/sudoku.py) - solver class
-> [main.py](https://github.com/drvojtex/Sudoku/main.py) - example evaluation
-> [explore.py](https://github.com/drvojtex/Sudoku/explore.py) - script to explore time depandance on a decreasing factor (hyperparameter of the heuristic)
+> [sudoku.py](https://github.com/drvojtex/Sudoku/blob/master/sudoku.py) - solver class
+
+> [main.py](https://github.com/drvojtex/Sudoku/blob/master/main.py) - example evaluation
+
+> [explore.py](https://github.com/drvojtex/Sudoku/blob/master/explore.py) - script to explore time depandance on a decreasing factor (hyperparameter of the heuristic)
 
 ## Method
 
@@ -32,4 +34,4 @@ This repository contains a heuristic solver based on simulated annealing for a s
  
 ## Results
 After evaluations the method for different hyperparameter setup (50 times for each setup) on 9x9 Sudoku, the lowes median time on Macbook M1 is for the "decreasing factor" 0.98855 with the median time 0.196549s. Results of exploration of the hyperparameter shows Figure below.
-![Decreasing factor exploration](https://github.com/drvojtex/Sudoku/exploration.png)
+![Decreasing factor exploration](https://github.com/drvojtex/Sudoku/blob/master/exploration.png)
