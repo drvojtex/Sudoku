@@ -1,0 +1,2 @@
+# Sudoku
+Sudoku heuristic solver
