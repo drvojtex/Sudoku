@@ -35,3 +35,11 @@ This repository contains a heuristic solver based on simulated annealing for a s
 ## Results
 After evaluations the method for different hyperparameter setup (50 times for each setup) on 9x9 Sudoku, the lowes median time on Macbook M1 is for the "decreasing factor" 0.98855 with the median time 0.196549s. Results of exploration of the hyperparameter shows Figure below.
 ![Decreasing factor exploration](https://github.com/drvojtex/Sudoku/blob/master/exploration.png)
+
+## Resources
+Lewis, R. (2007). Metaheuristics can solve Sudoku puzzles. J. Heuristics, 13, 387-401.
+
+challengingLuck. (2020, October 2). Youtube/sudoku.py at master · Challengingluck/youtube. GitHub. Retrieved April 18, 2023, from https://github.com/challengingLuck/youtube/blob/master/sudoku/sudoku.py 
+
+
+
