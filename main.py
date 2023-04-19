@@ -35,6 +35,8 @@ if __name__ == "__main__":
         0 14 0 0 0 13 9 0 4 12 11 8 0 0 2 0
     """
 
-    s = Sudoku(s2, 0.98855)
+    s = Sudoku(s1, 0.99) # python main.py  0.27s user 0.04s system 87% cpu 0.346 total
+    #s = Sudoku(s2, 0.98855) # python main.py  254.90s user 0.86s system 99% cpu 4:16.29 total
     s.heuristic()
     s.pretty_print()
+    s.plot_error_chart()

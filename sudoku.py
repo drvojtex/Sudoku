@@ -1,5 +1,8 @@
 
 import numpy as np
+import pandas as pd
+pd.options.plotting.backend = "plotly"
+
 from copy import deepcopy
 from math import trunc, exp
 from random import choice
@@ -10,6 +13,7 @@ class Sudoku:
 
     def __init__(self, task, decreaseFactor):
 
+        self.error = []
         self.decreaseFactor = decreaseFactor
 
         self.taskBoard = np.array([
@@ -37,6 +41,11 @@ class Sudoku:
             print(line)
         print("-" * ((self.n ** 2) * 3 + 2 + (self.n - 1) * 2))
 
+    def plot_error_chart(self):
+        df = pd.DataFrame({'total error':self.error})
+        df['Error 100-step moving average'] = df.rolling(100).mean()
+        df.plot(labels=dict(index='iterations', value='error')).show()
+        
     def get_fixed(self):
         fixed = deepcopy(self.taskBoard)
         fixed[fixed != 0] = 1
@@ -140,6 +149,7 @@ class Sudoku:
             for _ in range(0, iters):
                 scoreDiff = self.step(sigma)
                 score += scoreDiff
+                self.error.append(self.get_total_error(self.board))
             sigma *= self.decreaseFactor
             if epochs % 10 == 0:
                 if self.get_total_error(self.board) == 0:
